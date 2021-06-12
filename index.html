@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Math Quiz Game !!!
+        </title>
+        <meta name="veiwport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Game</h1>
+
+        <div class="container">
+            <h3>Player 1 Login for the game</h1>
+            <label>User Name:</label>
+            <input type="text" id="player_1_input" class="form-control" placeholder="Player 1 Name">
+            <br>
+        </div>
+        <div class="container2">
+            <h3>Player 2 Login for the game</h1>
+            <label>User Name:</label>
+            <input type="text" id="player_2_input" class="form-control" placeholder="Player 2 Name">
+            <br>
+        </div>
+        <button id="login" onclick="login()">Login</button>
+        <style>
+            body
+{
+	background: lightblue;
+    text-align: center;
+}
+
+	.container , .container2
+	{
+		background: white;
+		padding: 10px;
+		float: none;
+		border-radius: 15px;
+        margin-top: 15px;
+        width: 70%;
+	}
+    .container2{
+        margin-left: 155px;
+    }
+
+
+    #player_1_input , #player_2_input{
+	 display: inline-block;
+	 margin-left: 20px;
+     width: 50%;
+     margin-top: 10px;
+     }
+    button{
+     width: 50%;
+     margin-top: 20px;
+     background-color: rgb(41, 129, 201);
+     color: white;
+     border: ridge;
+    }
+
+
+    </style>
+
+    </body>
+    <script>
+        function login(){
+          player1_name = document.getElementById("player_1_input").value;
+          player2_name = document.getElementById("player_2_input").value;
+
+          localStorage.setItem("player1_name", player1_name);
+          localStorage.setItem("player2_name", player2_name);
+
+          window.location = "index(2).html";
+        }
+        </script>
+</html>
